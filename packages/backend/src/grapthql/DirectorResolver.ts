@@ -28,6 +28,7 @@ export class DirectorResolver {
     return new Director({
       id: director.id,
       name: director.name,
+      birthday: director.birthday,
       movies: movies.map(movie => new Movie(movie))
     });
   }
@@ -41,6 +42,7 @@ export class DirectorResolver {
       return new Director({
         id: director.id,
         name: director.name,
+        birthday: director.birthday,
         movies: movies.map(movie => new Movie(movie))
       });
     }));

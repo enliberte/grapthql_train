@@ -10,4 +10,7 @@ export class Director {
 
   @Property()
   name: string;
+
+  @Property()
+  birthday: string;
 }
