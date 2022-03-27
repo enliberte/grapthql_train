@@ -22,6 +22,7 @@
     "@tsed/json-mapper": "^6.107.4",
     "@tsed/logger": "^6.1.0",
     "@tsed/logger-file": "^6.1.0",
+    "@tsed/mongoose": "^6.107.4",
     "@tsed/platform-cache": "^6.107.4",
     "@tsed/platform-exceptions": "^6.107.4",
     "@tsed/platform-express": "^6.107.4",
@@ -49,6 +50,7 @@
     "express": "^4.17.3",
     "graphql": "^15.8.0",
     "method-override": "^3.0.0",
+    "mongoose": "^6.2.8",
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
