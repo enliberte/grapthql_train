@@ -1,4 +1,4 @@
-import {Field, ID, ObjectType} from "type-graphql";
+import {Field, ID, InputType, ObjectType} from "type-graphql";
 
 @ObjectType({description: "Object representing movie"})
 export class Movie {
@@ -20,4 +20,16 @@ export class Movie {
     options.year && (this.year = options.year);
     options.rating && (this.rating = options.rating);
   }
+}
+
+@InputType()
+export class NewMovie {
+  @Field()
+  name: string;
+
+  @Field()
+  year: number;
+
+  @Field()
+  rating: number;
 }

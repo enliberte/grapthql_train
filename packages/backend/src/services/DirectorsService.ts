@@ -1,17 +1,23 @@
 import {Service, Inject} from "@tsed/common";
 import {MongooseModel} from "@tsed/mongoose";
-import {Director} from "../models/Director";
+import {DirectorModel} from "../models/DirectorModel";
 
 @Service()
 export class DirectorsService {
-  constructor(@Inject(Director) private model: MongooseModel<Director>) {
+  constructor(@Inject(DirectorModel) private model: MongooseModel<DirectorModel>) {
   }
 
-  async save(obj: Director) {
+  async save(obj: DirectorModel) {
     const doc = new this.model(obj);
     await doc.save();
 
     return doc;
+  }
+
+  async add(obj: DirectorModel) {
+    const director = await this.model.create(obj);
+
+    return director;
   }
 
   async find(query: any) {

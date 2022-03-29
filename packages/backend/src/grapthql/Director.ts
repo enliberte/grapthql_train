@@ -1,5 +1,5 @@
-import {Field, ID, ObjectType} from "type-graphql";
-import { Movie } from "./Movie";
+import {Field, ID, InputType, ObjectType} from "type-graphql";
+import {Movie, NewMovie} from "./Movie";
 
 @ObjectType({description: "Object representing director"})
 export class Director {
@@ -21,4 +21,16 @@ export class Director {
     options.birthday && (this.birthday = options.birthday);
     options.movies && (this.movies = options.movies);
   }
+}
+
+@InputType()
+export class NewDirector {
+  @Field()
+  name: string;
+
+  @Field()
+  birthday: string;
+
+  @Field((type) => [NewMovie])
+  movies: NewMovie[];
 }

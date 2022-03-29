@@ -2,9 +2,10 @@ import {Property} from "@tsed/schema";
 import {Model, ObjectID} from "@tsed/mongoose";
 
 @Model({
-  connection: "grapthql_test"
+  connection: "grapthql_test",
+  collection: "movies",
 })
-export class Movie {
+export class MovieModel {
   @ObjectID("id")
   _id: string;
 
