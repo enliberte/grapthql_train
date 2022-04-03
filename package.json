@@ -13,6 +13,7 @@
     "build:server": "lerna run build --scope backend --stream",
     "start": "lerna run start --stream --parallel",
     "start:client": "lerna run start --scope client --stream",
+    "start:mobile-android": "lerna run android --scope mobile --stream",
     "start:server": "lerna run start --scope backend --stream",
     "start:prod": "cross-env NODE_ENV=production pm2-docker --raw processes.config.js --no-deamon",
     "docker:build": "yarn build && docker-compose build"
